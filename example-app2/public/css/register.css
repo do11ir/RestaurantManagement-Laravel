@@ -1,0 +1,103 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'YekanBakhRegular', sans-serif;
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the form */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Toggle buttons for switching forms */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #0C63E4;
+  background: white;
+  color: #0C63E4;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover, .toggle-btn:focus {
+  background: #0C63E4;
+  color: white;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #0C63E4;
+  box-shadow: 0px 0px 8px rgba(12, 99, 228, 0.2);
+}
+
+.submit-btn {
+  background: #0C63E4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #094AB2;
+}
+
+/* Login link */
+.login-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-link a {
+  color: #0C63E4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #094AB2;
+}

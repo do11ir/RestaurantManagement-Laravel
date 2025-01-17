@@ -1,0 +1,547 @@
+/*================ Normal desktop :992px.==================== */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+	.bg-shape {
+		height: 155%
+	}
+	.welcome-text {
+		padding-top: 15%;
+	}
+	.welcome-text h2 {
+		font-size: 50px;
+		line-height: 60px
+	}
+	.pelum-welcome-area {
+		height: 560px
+	}
+	.pelum-footer-area {
+		padding: 60px 0
+	}
+    .pelum-choose-area{
+        padding: 100px 0 80px
+    }
+    .site-heading h2, .about-heading h2, .choose-heading h2, .faq-heading h2{
+        font-size: 35px
+    }
+}
+
+
+/*================ Tablet desktop :768px.==================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.welcome-text {
+		padding-top: 25%;
+	}
+	.welcome-text h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.welcome-text p {
+		width: 100%;
+	}
+	.pelum-welcome-area {
+		height: auto
+	}
+	nav.navbar .navbar-toggler {
+		color: #fff
+	}
+	.navbar-toggler span {
+		color: #fff;
+		font-size: 25px;
+	}
+	#navbarCollapse {
+		background: #fff none repeat scroll 0 0;
+	}
+	nav.navbar .nav-item {
+		padding: 0 !important
+	}
+	nav.navbar .nav-item .nav-link {
+		color: #111;
+		padding: 9px 20px;
+		font-size: 15px
+	}
+	nav.navbar .nav-item .nav-link.active {
+		color: #4777F4 !important;
+		padding: 9px 20px;
+		display: block;
+	}
+	.site-heading h2,
+	.about-heading h2,
+	.choose-heading h2,
+	.faq-heading h2 {
+		font-size: 34px
+	}
+	.single-feature {
+		margin-top: 50px
+	}
+	.pelum-features-area .row .col-lg-3:nth-child(1) .single-feature {
+		margin-top: 0px
+	}
+	.pelum-features-area .row .col-lg-3:nth-child(2) .single-feature {
+		margin-top: 0px
+	}
+	.single-feature .feature-icon {
+		margin: 20px auto 40px
+	}
+	.pelum-features-area {
+		background-image: none
+	}
+	.video-box {
+		width: 100%
+	}
+	.about-heading {
+		width: 60%;
+	}
+	.site-heading h2,
+	.about-heading h2,
+	.choose-heading h2,
+	.faq-heading h2 {
+		font-size: 30px;
+		line-height: 45px
+	}
+	.about-left {
+		display: none;
+	}
+	.choose-heading {
+		width: 60%;
+	}
+	.video-inn h2 {
+		font-size: 26px
+	}
+	.single-choose-item {
+		margin: 0 10px
+	}
+	.faq_accordian_header>a.collapsed:before {
+		width: 15%
+	}
+	.faq-right {
+		display: none;
+	}
+	.pelum-testimonial-area {
+		background: transparent
+	}
+	.subscribe-box form {
+		width: 80%
+	}
+	.contact-info {
+		margin-top: 30px;
+	}
+	.pelum-footer-area {
+		padding: 50px 0
+	}
+	.product-image img {
+		margin-top: 0
+	}
+    .pelum-contact-area{
+        background: transparent
+    }
+    .pelum-about-area{
+        background: transparent
+    }
+    .feature-text h3{
+        font-size: 20px
+    }
+}
+
+
+/*================== small mobile :320px. ===================*/
+
+@media (max-width: 767px) {
+	.welcome-text {
+		padding-top: 35%;
+	}
+	.welcome-text h2 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 42px;
+		font-family: inherit;
+		margin-bottom: 20px;
+	}
+	.welcome-text p {
+		font-size: 16px;
+		width: 100%;
+		color: #555;
+	}
+	.logo img {
+		width: 50%;
+	}
+	.navbar-toggler span {
+		color: #fff;
+		font-size: 25px;
+	}
+	#navbarCollapse {
+		background: #fff none repeat scroll 0 0;
+	}
+    .pelum-about-area{
+        background: transparent
+    }
+    .about-left {
+        display: none;
+    }
+    .about-right{
+        margin-top: 0
+    }
+	.bg-shape {
+		height: 155%;
+		width: 100%;
+		border-radius: 100px;
+		-webkit-transform: translate(25%, -30%) rotate(-28deg);
+		transform: translate(25%, -30%) rotate(-28deg)
+	}
+	nav.navbar .nav-item {
+		padding: 0 !important
+	}
+	nav.navbar .nav-item .nav-link {
+		color: #111;
+		padding: 7px 15px;
+		font-size: 15px
+	}
+	nav.navbar .nav-item .nav-link.active {
+		color: #4777F4 !important;
+		padding: 7px 15px;
+		display: block;
+	}
+	.navbar-nav {
+		text-align: center
+	}
+	.pelum-welcome-area {
+		height: auto
+	}
+	.site-heading {
+		width: 100%
+	}
+	.site-heading h4,
+	.about-heading h4,
+	.choose-heading h4,
+	.faq-heading h4 {
+		font-size: 14px
+	}
+	.site-heading h2,
+	.about-heading h2,
+	.choose-heading h2,
+	.faq-heading h2 {
+		font-size: 26px;
+		margin-top: 5px;
+		line-height: 35px
+	}
+    .about-right ul li{
+        font-size: 14px
+    }
+    .video-inn h2{
+        font-size: 26px;
+        line-height: 35px
+    }
+	.single-feature .feature-icon {
+		margin: 20px auto 40px
+	}
+	.single-feature {
+		margin-top: 50px
+	}
+    .feature-text h3{
+        font-size: 20px
+    }
+	.about-left {
+		margin-top: 10px;
+	}
+	.video-box:after {
+		display: none
+	}
+	.video-box {
+		width: 100%
+	}
+	.video-inn {
+		padding: 20px;
+		border-radius: 10px
+	}
+	.video-inn h2 {
+		line-height: 40px
+	}
+	.choose-icon {
+		width: 200px
+	}
+	.product-image img {
+		margin-top: 0
+	}
+	.product-text {
+		margin-top: 30px;
+	}
+	.faq_accordian_header>a {
+		padding: 15px 70px 15px 15px;
+		font-size: 14px
+	}
+	.faq_accordian_header>a.collapsed:after {
+		right: 15px
+	}
+	.faq_accordian_header>a:after {
+		right: 15px
+	}
+	.faq_accordian_header>a.collapsed:before {
+		width: 20%
+	}
+	.faq-right {
+		display: none;
+	}
+	.pelum-features-area {
+		background-image: none
+	}
+	.choose-heading {
+		text-align: center;
+	}
+	.faq-heading {
+		text-align: center;
+	}
+	.subscribe-box form {
+		width: 100%
+	}
+	.pelum-testimonial-area {
+		background: transparent
+	}
+	.subscribe-box form button {
+		padding: 0 15px
+	}
+	.subscribe-box form input {
+		padding: 10px 40px 10px 135px
+	}
+	.subscribe-box form i {
+		right: 15px;
+		top: 22px;
+		font-size: 16px;
+	}
+	.contact-form .row:first-child p {
+		margin-top: 15px;
+	}
+	.contact-form form p {
+		margin-top: 15px;
+	}
+	.contact-form .row:first-child .col-lg-6:first-child p {
+		margin-top: 0px;
+	}
+	.contact-info {
+		margin-top: 30px;
+	}
+	.footer-logo img {
+		width: 130px;
+	}
+	.footer-copyright p {
+		letter-spacing: 1px
+	}
+	.pelum-footer-area {
+		padding: 50px 0
+	}
+    .pelum-contact-area{
+        background: transparent
+    }
+    .welcome-image {
+        margin-top: 20px;
+    }
+    .welcome-image img {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* ======================Large Mobile :480px.================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.welcome-text {
+		padding-top: 25%;
+	}
+	.welcome-image {
+		margin-top: 0px;
+		text-align: right
+	}
+	.welcome-text h2 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 42px;
+		font-family: inherit;
+		margin-bottom: 20px;
+	}
+	.welcome-image img {
+		width: 40%;
+	}
+	.welcome-text p {
+		font-size: 16px;
+		width: 100%;
+		color: #555;
+	}
+    .about-left {
+        display: none;
+    }
+    .about-right{
+        margin-top: 0
+    }
+	.logo img {
+		width: 50%;
+	}
+	.navbar-toggler span {
+		color: #fff;
+		font-size: 25px;
+	}
+	#navbarCollapse {
+		background: #fff none repeat scroll 0 0;
+	}
+	.bg-shape {
+		height: 155%;
+		width: 100%;
+		border-radius: 100px;
+		-webkit-transform: translate(25%, -30%) rotate(-28deg);
+		transform: translate(25%, -30%) rotate(-28deg)
+	}
+	nav.navbar .nav-item {
+		padding: 0 !important
+	}
+	nav.navbar .nav-item .nav-link {
+		color: #111;
+		padding: 7px 15px;
+		font-size: 15px
+	}
+	nav.navbar .nav-item .nav-link.active {
+		color: #4777F4 !important;
+		padding: 7px 15px;
+		display: block;
+	}
+	.navbar-nav {
+		text-align: center
+	}
+	.pelum-welcome-area {
+		height: auto
+	}
+	.site-heading {
+		width: 100%
+	}
+    .feature-text h3{
+        font-size: 20px
+    }
+	.site-heading h4,
+	.about-heading h4,
+	.choose-heading h4,
+	.faq-heading h4 {
+		font-size: 14px
+	}
+	.site-heading h2,
+	.about-heading h2,
+	.choose-heading h2,
+	.faq-heading h2 {
+		font-size: 30px;
+		margin-top: 5px;
+		line-height: 40px
+	}
+	.single-feature .feature-icon {
+		margin: 20px auto 40px
+	}
+	.single-feature {
+		margin-top: 50px
+	}
+	.about-right {
+		margin-top: 0px;
+	}
+	.about-left {
+		margin-top: 10px;
+	}
+	.video-box:after {
+		display: none
+	}
+	.video-box {
+		width: 100%
+	}
+    .single-choose-item{
+        margin: 0 5px
+    }
+	.video-inn {
+		padding: 20px;
+		border-radius: 10px
+	}
+	.video-inn h2 {
+		line-height: 40px
+	}
+	.choose-icon {
+		width: 100px
+	}
+	.product-image img {
+		margin-top: 0
+	}
+	.product-text {
+		margin-top: 30px;
+	}
+	.product-text h3 {
+		font-size: 18px
+	}
+	.faq_accordian_header>a {
+		padding: 15px 15px 15px 90px;
+		font-size: 14px
+	}
+	.faq_accordian_header>a.collapsed:after {
+		left: 15px
+	}
+	.faq_accordian_header>a:after {
+		left: 15px
+	}
+	.faq_accordian_header>a.collapsed:before {
+		width: 20%
+	}
+	.faq-right {
+		display: none;
+	}
+	.pelum-features-area {
+		background-image: none
+	}
+	.choose-heading {
+		text-align: center;
+	}
+	.faq-heading {
+		text-align: center;
+	}
+	.subscribe-box form {
+		width: 100%
+	}
+	.pelum-testimonial-area {
+		background: transparent
+	}
+	.subscribe-box form button {
+		padding: 0 15px
+	}
+	.subscribe-box form input {
+		padding: 10px 135px 10px 40px
+	}
+	.subscribe-box form i {
+		left: 15px;
+		top: 22px;
+		font-size: 16px;
+	}
+	.contact-form .row:first-child p {
+		margin-top: 15px;
+	}
+	.contact-form form p {
+		margin-top: 15px;
+	}
+	.contact-form .row:first-child .col-lg-6:first-child p {
+		margin-top: 0px;
+	}
+	.contact-info {
+		margin-top: 30px;
+	}
+	.footer-logo img {
+		width: 130px;
+	}
+	.footer-copyright p {
+		letter-spacing: 1px
+	}
+	.pelum-footer-area {
+		padding: 50px 0
+	}
+    .pelum-contact-area{
+        background: transparent
+    }
+    .welcome-image {
+        margin-top: 20px;
+    }
+    .welcome-image img {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   sash – Bootstrap 5  Admin & Dashboard Template
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   Spruko
+Author URL     :   https://themeforest.net/user/spruko
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+/*
+--- bootstrap-styles
+--- accordion
+--- alert
+--- avatars
+--- badges
+--- blackquote
+--- breadcrumb
+--- button
+--- buttons
+--- cards
+--- carousel
+--- dropdown
+--- forms
+--- grid
+--- input-group
+--- modal
+--- navigation
+--- pagination
+--- panel
+--- popover
+--- progress
+--- tables
+--- tags
+--- thumbnail
+--- tooltip
+--- components-col
+--- custom-forms
+--- custom-styles
+--- file-manager
+--- font
+--- gallery
+--- highlight
+--- labels
+--- landing
+--- list-group
+--- media
+--- navbar
+--- pricing
+--- rating
+--- tabs-menu
+--- timeline
+--- footer
+--- header
+--- horizontal-menu
+--- icons-list
+--- loaders
+--- rtl
+--- datepicker
+--- jvector
+--- select2
+--- select-group
+--- default-menu
+--- sidemenu-icontext
+--- closed-menu
+--- hover-submenu
+--- hover-submenu-style1
+--- calender
+--- chart
+--- chat
+--- error-pages
+--- range
+--- ribbon
+--- form-wizard
+--- widgets
+--- alignments
+--- background
+--- border
+--- display
+--- float-elements
+--- height
+--- margin
+--- padding
+--- position
+--- typography
+--- width
+*/
+/* ######## FONT ######## */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap");
+/* ######## BOOTSTRAP ######## */
+/*Color variables*/
+/*Gradient variables*/
+/*white variables*/
+/*black variables*/
+/*shadow variables*/
+/*Dark Theme Variables*/
+/*Transparent variables*/
+/*  ######## CUSTOM-STYLES ######## */
+/* ######## LAYOUT-STYLES ######## */
+/* ######## LIBRARY-STYLES ######## */
+/* ######## SIDEMENU-STYLES ######## */
+/* ######## TEMPLATE-STYLES ######## */
+/* ######## UTILITIES-STYLES ######## */
+
+/*# sourceMappingURL=style.css.map */

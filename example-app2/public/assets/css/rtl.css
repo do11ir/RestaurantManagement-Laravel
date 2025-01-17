@@ -1,0 +1,55 @@
+
+/*------ change font------*/
+.ms-search input,.leaflet-popup-content,
+.jvectormap-tip, #ui_notifIt p, .c3-tooltip td, .c3-chart-text text, .c3 text, .popover, .sp-container button, .sp-cancel,
+.pcr-app .pcr-interaction .pcr-save, .pcr-app .pcr-interaction .pcr-cancel, .pcr-app .pcr-interaction .pcr-clear,
+.datepicker td, .datepicker-plot-area *, .ql-container, .fr-box.fr-basic .fr-element, .richText .richText-editor,
+.wizard > .steps a .number, .wizard > .steps a:hover .number, .wizard > .steps a:active .number, .tooltip, body ,
+svg text tspan,.morris-hover.morris-default-style,.nvd3 text ,.nvd3 .title,.nvtooltip{
+    font-family: main-font, serif !important;
+}
+
+.login-social-icon span,
+.btn, .main-chat-time span {
+    letter-spacing: 0
+}
+
+.vtimeline .timeline-wrapper .timeline-panel .timeline-footer span {
+    display: flex;
+    align-items: center;
+}
+
+.panel-body .lead {
+    font-size: 15px;
+}
+.dTree li.folder-group {
+    background: unset;
+}
+.price .panel-body .lead strong {
+    font-size: 17px;
+}.dropdown.d-flex.header-settings,
+.app-sidebar__toggle {
+    transform: scaleX(-1);
+}
+.panel-body .lead strong {
+    font-size: 19px;
+}g.c3-axis.c3-axis-y text {
+     transform: translateX(-10px);
+ }
+
+#chart-spline-rotated g.tick text ,
+#chart-bar-rotated g.tick text {
+    transform: translateX(-27px);
+}
+
+#chart-tasks .c3-legend-item text {
+    transform: translate(40px,-1px);
+}
+.rtl .ms-search input {
+    padding: 0 20px 0 5px;
+}.login-social-icon::after {
+     width: 10%;
+ }
+ .landing-page .page{
+     overflow-x: hidden;
+ }
