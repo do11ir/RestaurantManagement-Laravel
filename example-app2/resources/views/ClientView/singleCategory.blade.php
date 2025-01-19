@@ -10,8 +10,8 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #2e2e2e;
-            color: #ffffff;
+            background-color: #fff;
+            color: #000;
             line-height: 1.6;
         }
 
@@ -21,7 +21,7 @@
 
         /* Header */
         .header {
-            background-color: #d32f2f;
+            background-color: #ad2d2d;
             padding: 20px;
             text-align: center;
         }
@@ -42,8 +42,9 @@
 
         /* Menu Item Styles */
         .menu-item {
-            background-color: #424242;
+            background-color: #f0f0f0;
             padding: 15px;
+            margin: 15px;
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,14 +66,14 @@
         /* Food Title */
         .menu-item-title h3 {
             margin: 15px 0;
-            color: #ffcc00;
+            color: #000;
             font-size: 1.4rem;
         }
 
         /* Food Price */
         .menu-item-price {
             font-size: 1.2rem;
-            color: #ffffff;
+            color: #000;
         }
 
         /* Footer */
@@ -125,7 +126,7 @@
 
     </style>
 </head>
-<body>
+<body dir="rtl">
 
     <!-- Header Section -->
     <header class="header">
@@ -143,7 +144,7 @@
                     <h3>{{ $foods->name }}</h3>
                 </div>
                 <div class="menu-item-price">{{ number_format($foods->price) }}</div>
-                <a href="{{ route('singleFood' , ['id'=> $foods->id]) }}" type="button" class="btn btn-cherry w-100">add to cart</a>
+                <a href="{{ route('singleFood' , ['id'=> $foods->id]) }}" type="button" class="btn btn-cherry w-100">افزودن به سبد خرید</a>
             </div>
             @endif
         @endforeach

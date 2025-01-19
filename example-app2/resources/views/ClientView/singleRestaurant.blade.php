@@ -11,8 +11,8 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #2e2e2e;
-            color: #ffffff;
+            background-color: #fff;
+            color: #000;
             line-height: 1.6;
         }
 
@@ -24,7 +24,7 @@
 
         /* Header */
         .header {
-            background-color: #d32f2f;
+            background-color: #ad2d2d;
             padding: 20px;
             text-align: center;
         }
@@ -46,7 +46,7 @@
 
         /* Menu Item */
         .menu-item {
-            background-color: #3c3c3c;
+            background-color: #f0f0f0;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
@@ -74,19 +74,19 @@
 
         .menu-item h2 {
             font-size: 1.6rem;
-            color: #ff4c4c;
+            color: #ad2d2d;
             font-weight: bold;
         }
 
         .menu-item p {
             font-size: 1rem;
-            color: #e0e0e0;
+            color: #000;
             margin-bottom: 15px;
         }
 
         .menu-item .price {
             font-size: 1.2rem;
-            color: #ffcc00;
+            color: #000;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -165,7 +165,7 @@
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
 
     <!-- Header -->
     <header class="header">
@@ -183,13 +183,13 @@
     <main class="menu-container">
         @foreach($food as $foodss)
             @if($foodss->restaurant_id == $restaurant->id)
-            <div class="menu-item">
+            <div class="menu-item" >
                 <div class="image-container" style="background-image: url('{{ asset('img/'.$foodss->image) }}');"></div>
                 <h2>{{ $foodss->name }}</h2>
                 <p>{{ $foodss->description }}</p>
                 <div class="">{{ $foodss->price }}</div>
                 <a href="{{ route('basket.add', ['foods_id' => $foodss->id]) }}" class="cart-link">
-                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                    <i class="fas fa-shopping-cart"></i> افزودن به سبد خرید
                 </a>
             </div>
             @endif

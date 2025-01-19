@@ -9,8 +9,8 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #2e2e2e;
-            color: #ffffff; /* Light text color */
+            background-color: #fff;
+            color: #000; /* Light text color */
             line-height: 1.6;
         }
 
@@ -20,7 +20,7 @@
 
         /* Header */
         .header {
-            background-color: #d32f2f;
+            background-color: #ad2d2d;
             padding: 20px;
             text-align: center;
         }
@@ -63,13 +63,13 @@
             max-width: 500px;
             text-align: left;
             padding: 20px;
-            background-color: #424242; /* Dark gray for details */
+            background-color: #f0f0f0; /* Dark gray for details */
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .product-details h2 {
-            color: #fff;
+            color: #000;
             font-size: 1.8rem;
             margin-bottom: 15px;
         }
@@ -77,13 +77,13 @@
         .product-details p {
             font-size: 1.1rem;
             margin: 15px 0;
-            color: #ffffff;
+            color: #000;
             line-height: 1.5;
         }
 
         .product-details .price {
             font-size: 1.5rem;
-            color: white;  /* Yellow for price */
+            color: black;  
             margin-top: 15px;
             font-weight: bold;
         }
@@ -91,7 +91,7 @@
         /* Add to Cart Button */
         .add-to-cart-btn {
             display: inline-block;
-            background-color: #d32f2f;  /* Cherry Red */
+            background-color: #ad2d2d;  /* Cherry Red */
             color: #fff;
             padding: 12px 25px;
             border: none;
@@ -155,7 +155,7 @@
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
     <header class="header">
         @foreach($restaurant as $rest)
             @if($rest->id == $food->restaurant_id)
@@ -172,16 +172,16 @@
         </div>
 
         <!-- Product Details -->
-        <div class="product-details">
+        <div class="product-details" dir="rtl">
             <h2>{{ $food->name }}</h2>
             <p>{{ $food->description }}</p>
-            <p>Category: <span>{{ $food->category_id }}</span></p>
+            <p>دسته بندی: <span>{{ $food->category_id }}</span></p>
             @foreach($restaurant as $item)
                 @if( $food->restaurant_id == $item->id )
-                    <p>Restaurant: <span>{{ $item->name }}</span></p>
+                    <p>رستوران: <span>{{ $item->name }}</span></p>
                 @endif
             @endforeach
-            <div class="price">{{ number_format($food->price) }}</div>
+            <div class="price">قیمت: {{ number_format($food->price) }}</div>
             <div style="margin-top: 40px;">
                 <a href="{{ route('basket.add', ['foods_id'=>$food->id ]) }}" class="add-to-cart-btn" onclick="addToCart()">Add to Cart</a>
             </div>

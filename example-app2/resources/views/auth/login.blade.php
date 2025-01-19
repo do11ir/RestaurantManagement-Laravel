@@ -8,8 +8,8 @@
     <link rel="icon" href="{{ asset('img/favicon1.png')}}" type="image/x-icon">
     <style>
         body {
-            background-color: #2e2e2e;
-            color: #fff;
+            background-color: #fff;
+            color: #000;
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
@@ -20,7 +20,7 @@
         }
 
         .container {
-            background-color: #424242;
+            background-color: #ad2d2d;
             padding: 2rem;
             border-radius: 10px;
             width: 100%;
@@ -30,7 +30,7 @@
         }
 
         h1 {
-            color: #d32f2f;
+            color: #fff;
             margin-bottom: 1rem;
             font-size: 2rem;
         }
@@ -44,13 +44,13 @@
         }
 
         .form input {
-            background-color: #555; /* Set the background color to gray */
-            border: 1px solid #777; /* Set border color to gray */
+            background-color: #f5f5f5; /* Set the background color to gray */
+            border: 1px solid #fff; /* Set border color to gray */
             padding: 1rem;
             margin-bottom: 1rem;
             width: 100%;
             border-radius: 5px;
-            color: white;
+            color: black;
         }
 
         .form input::placeholder {
@@ -63,8 +63,8 @@
         }
 
         .submit {
-            background-color: #d32f2f;
-            color: #fff;
+            background-color: #c0c0c0;
+            color: #000;
             border: none;
             padding: 1rem;
             width: 100%;
@@ -83,7 +83,7 @@
         }
 
         .login-link a {
-            color: #d32f2f;
+            color: #fff;
             text-decoration: none;
         }
 
@@ -94,7 +94,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
+        <h1>ورود</h1>
 
         <!-- Display error messages -->
         @if ($errors->any())
@@ -111,24 +111,24 @@
             @csrf
 
             <!-- Email or Phone field -->
-            <input type="text" name="email" placeholder="Email or Phone Number" required value="{{ old('email') }}">
+            <input type="text" name="email" dir="rtl" placeholder="ایمیل یا شماره تماس" required value="{{ old('email') }}">
             @error('email')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
             <!-- Password field -->
-            <input name="password" required placeholder="Password" type="password">
+            <input name="password" dir="rtl" required placeholder="رمز عبور" type="password">
             @error('password')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
             <!-- Submit button -->
-            <input class="submit" value="Login" type="submit">
+            <input class="submit" value="ورو به حساب" type="submit">
         </form>
 
         <p class="login-link">
-            Don't have an account? 
-            <a href="{{ route('register') }}">Register</a>
+            حساب کاربری ندارید؟
+            <a href="{{ route('register') }}">ثبت نام کنید</a>
         </p>
     </div>
 </body>

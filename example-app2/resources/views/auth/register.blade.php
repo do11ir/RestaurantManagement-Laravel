@@ -8,8 +8,8 @@
 
     <style>
         body {
-            background-color: #2e2e2e;
-            color: #fff;
+            background-color: #fff;
+            color: #000;
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
@@ -20,7 +20,7 @@
         }
 
         .container {
-            background-color: #424242;
+            background-color: #ad2d2d;
             padding: 2rem;
             border-radius: 10px;
             width: 100%;
@@ -30,7 +30,7 @@
         }
 
         h1 {
-            color: #d32f2f;
+            color: #fff;
             margin-bottom: 1rem;
             font-size: 2rem;
         }
@@ -44,13 +44,13 @@
         }
 
         .form input {
-            background-color: #555; /* Set the background color to gray */
-            border: 1px solid #777; /* Set border color to gray */
+            background-color: #f5f5f5; /* Set the background color to gray */
+            border: 1px solid #fff; /* Set border color to gray */
             padding: 1rem;
             margin-bottom: 1rem;
             width: 100%;
             border-radius: 5px;
-            color: white;
+            color: black;
         }
 
         .form input::placeholder {
@@ -63,8 +63,8 @@
         }
 
         .submit {
-            background-color: #d32f2f;
-            color: #fff;
+            background-color: #c0c0c0;
+            color: #000;
             border: none;
             padding: 1rem;
             width: 100%;
@@ -83,18 +83,19 @@
         }
 
         .login-link a {
-            color: #d32f2f;
+            color: #fff;
             text-decoration: none;
         }
 
         .login-link a:hover {
             text-decoration: underline;
         }
+   
     </style>
 </head>
-<body>
+<body >
     <div class="container">
-        <h1>Register</h1>
+        <h1>ثبت نام</h1>
 
         <!-- Display error messages -->
         @if ($errors->any())
@@ -109,45 +110,49 @@
 
         <form method="POST" action="{{ route('register') }}" class="form">
             @csrf
-            <input name="name" placeholder="Full Name" type="text" class="input" value="{{ old('name') }}" required>
+            <input name="name" dir="rtl" placeholder="نام" type="text" class="input" value="{{ old('name') }}" required>
             @error('name')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-            <input name="email" placeholder="Email" type="email" class="input" value="{{ old('email') }}" required>
+            <input name="email" dir="rtl" placeholder="ایمیل" type="email" class="input" value="{{ old('email') }}" required>
             @error('email')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-            <input name="phone" placeholder="Phone Number" type="text" class="input" value="{{ old('phone') }}" required>
+            <input name="phone" dir="rtl" placeholder="شماره تلفن" type="text" class="input" value="{{ old('phone') }}" required>
             @error('phone')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-            <input name="address" placeholder="Address" type="text" class="input" value="{{ old('address') }}" required>
+            <input name="address" dir="rtl" placeholder="آدرس" type="text" class="input" value="{{ old('address') }}" required>
             @error('address')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-            <input name="password" placeholder="Password" type="password" class="input" required>
+            <input name="password" dir="rtl" placeholder="رمز عبور" type="password" class="input" required>
             @error('password')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-            <input name="password_confirmation" placeholder="Confirm Password" type="password" class="input" required>
+            <input name="password_confirmation" dir="rtl" placeholder="تکرار رمز عبور" type="password" class="input" required>
 
             <!-- Select box for role selection -->
-            <select name="RoleAdmin" class="input select">
-                <option value="">User</option>
-                <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>Admin</option>
+            <select name="RoleAdmin" dir="rtl" class="input select">
+                <option value="">کاربر</option>
+                <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>مدیر</option>
             </select>
 
-            <button type="submit" class="submit">Register</button>
+            <button type="submit" class="submit">ثبت نام</button>
         </form>
 
-        <p class="login-link">
-            Already registered? <a href="{{ route('login') }}">Login</a>
+        <p class="login-link" dir="rtl">
+            قبلا ثبت نام کرده اید؟ <a href="{{ route('login') }}">وارد شوید</a>
         </p>
     </div>
+
+    
+   
 </body>
+
 </html>
