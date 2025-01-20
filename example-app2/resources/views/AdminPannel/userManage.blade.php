@@ -8,8 +8,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b;
-            color: white;
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -24,14 +24,14 @@
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #444;
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d;
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -62,8 +62,8 @@
 
         /* Input and Form Styles */
         .form-control {
-            background-color: #333;
-            color: white;
+            background-color: #fff;
+            color: #000;
             border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
@@ -88,11 +88,11 @@
 
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
+    <h2 class="text-center mb-4">افزودن کاربر جدید</h2>
     <div class="container">
-        <h2 class="text-center mb-4">Add New User</h2>
-        <a class="btn btn-primary" href="{{ route('admin') }}">Return to Admin Panel</a>
+        <a class="btn btn-primary" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -111,33 +111,33 @@
         <form action="{{ route('insertUser') }}" method="POST" enctype="multipart/form-data">
             @csrf 
             <div class="mb-3">
-                <label for="name" class="form-label">User Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter user name" required>
+                <label for="name" class="form-label">نام کاربر</label>
+                <input type="text" name="name" id="name" class="form-control"  required>
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label">User Phone</label>
-                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter user phone number" required>
+                <label for="phone" class="form-label">تلفن تماس</label>
+                <input type="text" name="phone" id="phone" class="form-control"  required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">User Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter user email" required>
+                <label for="email" class="form-label">ایمیل</label>
+                <input type="email" name="email" id="email" class="form-control"  required>
             </div>
-            <label for="address">User Address</label>
-            <textarea id="address" class="form-control" name="address" placeholder="Enter user address" required></textarea>
+            <label for="address">آدرس</label>
+            <textarea id="address" class="form-control" name="address"  required></textarea>
 
-            <label for="password">Password</label>
-            <input name="password" id="password" placeholder="Password" type="password" class="form-control" required>
+            <label for="password">رمز عبور</label>
+            <input name="password" id="password" type="password" class="form-control" required>
 
-            <label for="password_confirmation">Password Confirmation</label>
-            <input name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" type="password" class="form-control" required>
+            <label for="password_confirmation">تکرار رمزعبور</label>
+            <input name="password_confirmation" id="password_confirmation"  type="password" class="form-control" required>
            
-            <label>Role</label>
+            <label>نقش</label>
             <select class="form-control" name="RoleAdmin" class="select">
-                <option value="">User</option>
-                <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>Restaurant Manager</option>
+                <option value="">کاربر</option>
+                <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>مدیر رستوران</option>
             </select>
            
-            <button type="submit" class="btn btn-primary w-100">Add User</button>
+            <button type="submit" class="btn btn-primary w-100">افزودن</button>
         </form>
     </div>
 

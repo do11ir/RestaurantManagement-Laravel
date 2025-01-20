@@ -8,18 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #121212;
-            color: #f8f9fa;
+            background-color: #fff;
+            color: #000;
         }
 
         .sidebar {
-            background-color: #1c1c1c;
+            background-color: #f0f0f0;
             min-height: 100vh;
             padding: 15px;
         }
 
         .sidebar a {
-            color: #f8f9fa;
+            color: #000;
             text-decoration: none;
         }
 
@@ -32,22 +32,22 @@
         }
 
         .card {
-            background-color: #1c1c1c;
+            background-color: #c0c0c0;
             border: 1px solid #343a40;
         }
 
         .card-header {
-            background-color: #343a40;
+            background-color: #b0b0b0;
             color: #f8f9fa;
         }
 
         .card-body {
-            background-color: #252a2e;
+            background-color: #ad2d2d;
             color: #f8f9fa;
         }
 
         .btn-primary {
-            background-color: #e63946;
+            background-color: #ad2d2d;
             border-color: #e63946;
         }
 
@@ -57,12 +57,12 @@
         }
 
         .table {
-            background-color: #1c1c1c;
-            color: #f8f9fa;
+            background-color: #c0c0c0;
+            color: #000;
         }
 
         .table th, .table td {
-            border-color: #343a40;
+            border-color: #c0c0c0;
         }
 
         .alert {
@@ -71,7 +71,7 @@
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
     @if ( Auth::user()->RoleAdmin == 'master')
         <div class="container-fluid">
             <div class="row">
@@ -82,35 +82,35 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                            <a class="nav-link" href="#">داشبرد</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('addFood') }}">Add Food</a>
+                            <a class="nav-link" href="{{ route('addFood') }}">افزودن غذا</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('reataurantFactors') }}">Orders</a>
+                            <a class="nav-link" href="{{ route('reataurantFactors') }}">سفارش ها</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('addCategory') }}">Categories</a>
+                            <a class="nav-link" href="{{ route('addCategory') }}">دسته بندی ها</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('editUserInfo') }}">Edit Info</a>
+                            <a class="nav-link" href="{{ route('editUserInfo') }}"> تغییر اطلاعات</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user') }}">Home</a>
+                            <a class="nav-link" href="{{ route('user') }}">خانه</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-9 content">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4>Welcome, {{ Auth::user()->name }}</h4>
-                        <a href="{{ route('logout') }}" class="btn btn-primary">Logout</a>
+                        <h4>خوش آمدید, {{ Auth::user()->name }}</h4>
+                        <a href="{{ route('logout') }}" class="btn btn-primary">خروج</a>
                     </div>
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    Restaurant Info
+                                    اطلاعات 
                                 </div>
                                 <div class="card-body">
                                     @if($restaurant)
@@ -124,20 +124,20 @@
                                         @endphp
                                         @endif
                                     @endforeach
-                                        <p><strong>Name:</strong> {{ $restaurant->name }}</p>
-                                        <p><strong>Address:</strong> {{ $restaurant->restaurant_address }}</p>
-                                        <p><strong>Foods:</strong> {{ $counter }}</p>
+                                        <p><strong>نام:</strong> {{ $restaurant->name }}</p>
+                                        <p><strong>آدرس:</strong> {{ $restaurant->restaurant_address }}</p>
+                                        <p><strong>غذاها:</strong> {{ $counter }}</p>
                                         @foreach($NewAddress as $New)
                                             @if ($New->user_id == Auth::user()->id)
                                             <div style="display: flex; align-items: center;">
-                                                <p class="m-2"><strong>Address:</strong> {{ $New->address }}</p>
+                                                <p class="m-2"><strong>آدرس:</strong> {{ $New->address }}</p>
                                                 <a href="{{ route('deleteAddress' , ['id' => $New->id]) }}" class="btn btn-primary" >delete</a>
                                             </div>
                                             @endif
                                         @endforeach
                                     @else
                                         <div class="alert alert-danger text-center">
-                                            You haven't added your restaurant info yet.
+                                            اطلاعات رستوران وارد نشده
                                         </div>
                                         <a href="{{ route('editRestaurant') }}" class="btn btn-primary d-block mx-auto" style="width: fit-content;">Complete Info</a>
                                     @endif
@@ -146,29 +146,29 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card mb-4">
-                                <div class="card-header">Profile</div>
+                                <div class="card-header">پروفایل</div>
                                 <div class="card-body">
-                                    <p><strong>Manager Name:</strong> {{ Auth::user()->name }}</p>
-                                    <p><strong>Address:</strong> {{ Auth::user()->address }}</p>
-                                    <p><strong>Phone:</strong> {{ Auth::user()->phone }}</p>
+                                    <p><strong>نام مدیر:</strong> {{ Auth::user()->name }}</p>
+                                    <p><strong>آدرس:</strong> {{ Auth::user()->address }}</p>
+                                    <p><strong>تلفن:</strong> {{ Auth::user()->phone }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <div class="card-header">Foods</div>
+                        <div class="card-header">غذاها</div>
                         <div class="card-body">
                             <table class="table table-bordered table-dark table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Image</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Stock</th>
-                                        <th>Status</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                        <th>تصویر</th>
+                                        <th>نام</th>
+                                        <th>جزییات</th>
+                                        <th>موجودی</th>
+                                        <th>وضعیت</th>
+                                        <th>تغییر</th>
+                                        <th>حذف</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -214,26 +214,26 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
+                            <a class="nav-link" href="#">داشبرد</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('editUserInfo') }}">Edit User</a>
+                            <a class="nav-link" href="{{ route('editUserInfo') }}"> تغییر کاربر</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user') }}">Home</a>
+                            <a class="nav-link" href="{{ route('user') }}">خانه</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-9 content">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4>Welcome, {{ Auth::user()->name }}</h4>
-                        <a href="{{ route('logout') }}" class="btn btn-primary">Logout</a>
+                        <h4>خوش آمدید, {{ Auth::user()->name }}</h4>
+                        <a href="{{ route('logout') }}" class="btn btn-primary">خروج</a>
                     </div>
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    User Info
+                                    اطلاعات کاربر 
                                 </div>
                                 <div class="card-body">
                                     @php
@@ -245,13 +245,13 @@
                                     
                                     
                                     @if ( !$key )
-                                        <p class="m-2"><strong>Number of orders:</strong> 0</h1>
+                                        <p class="m-2"><strong>تعداد سفارش ها:</strong> 0</h1>
                                     @else
-                                        <p class="m-2"><strong>Number of orders:</strong> {{$key+1}}</h1>
+                                        <p class="m-2"><strong>سفارش ها:</strong> {{$key+1}}</h1>
                                     @endif
-                                        <p class="m-2"><strong>Rule:</strong> User</p>
-                                        <p class="m-2"><strong>Address:</strong> {{ Auth::user()->address }}</p>
-                                        <p class="m-2"><strong>Phone Number:</strong>{{ Auth::user()->phone }} </p>
+                                        <p class="m-2"><strong>نقش:</strong> کاربر</p>
+                                        <p class="m-2"><strong>آدرس:</strong> {{ Auth::user()->address }}</p>
+                                        <p class="m-2"><strong> شماره تماس:</strong>{{ Auth::user()->phone }} </p>
                                     @foreach($NewAddress as $New)
                                         @if ($New->user_id == Auth::user()->id)
                                             <div style="display: flex; align-items: center;">
@@ -266,27 +266,27 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card mb-4">
-                                <div class="card-header">Profile</div>
+                                <div class="card-header">پروفایل</div>
                                 <div class="card-body">
-                                    <p><strong>Manager Name:</strong> {{ Auth::user()->name }}</p>
-                                    <p><strong>Address:</strong> {{ Auth::user()->address }}</p>
-                                    <p><strong>Phone:</strong> {{ Auth::user()->phone }}</p>
+                                    <p><strong>نام مدیر:</strong> {{ Auth::user()->name }}</p>
+                                    <p><strong>آدرس:</strong> {{ Auth::user()->address }}</p>
+                                    <p><strong>شماره تماس:</strong> {{ Auth::user()->phone }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <div class="card-header">Recent Orders</div>
+                        <div class="card-header"> آخرین سفارش ها</div>
                         <div class="card-body">
                             <table class="table table-bordered table-dark table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Time</th>
-                                        <th>Restaurant Name</th>
-                                        <th>Status</th>
-                                        <th>Payment</th>
-                                        <th>Total Cost</th>
+                                        <th>زمان</th>
+                                        <th>نام رستوران </th>
+                                        <th>وضعیت</th>
+                                        <th>پرداخت</th>
+                                        <th>مبلغ کل </th>
                                     </tr>
                                 </thead>
                                 <tbody>

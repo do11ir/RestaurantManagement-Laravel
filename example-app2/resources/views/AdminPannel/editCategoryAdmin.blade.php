@@ -8,8 +8,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b; /* Dark Gray background */
-            color: white; /* White text color */
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -18,20 +18,20 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
-            color: white;
         }
 
         .container {
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #333; /* Dark Gray background for container */
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
+        /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d; /* Cherry Red button */
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -43,9 +43,9 @@
        
 
         .form-control {
-            background-color: #444; /* Dark Gray input */
-            color: white;
-            border: 1px solid #555;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
         }
@@ -67,11 +67,11 @@
         }
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Edit Categories</h2>
-        <a class="btn btn-primary" href="{{ route('admin') }}"> Back to Admin Panel </a>
+        <h2 class="text-center mb-4">تغییر دسته بندی</h2>
+        <a class="btn btn-primary" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
                     @if(session('success'))
                       <div class="alert alert-success">
                             {{ session('success') }}
@@ -94,12 +94,12 @@
             @csrf 
             
             <div class="mb-3">
-                <label for="name" class="form-label">Category Name</label>
+                <label for="name" class="form-label">نام دسته</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $category->name }}" required>
             </div>
            
 
-            <button type="submit" class="btn btn-primary w-100">Edit Category</button>
+            <button type="submit" class="btn btn-primary w-100">ذخیره</button>
         </form>
     </div>
 

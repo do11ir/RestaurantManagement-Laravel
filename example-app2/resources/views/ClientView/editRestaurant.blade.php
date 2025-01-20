@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Lalezar', cursive;
-            background-color: #121212;
-            color: #f8f9fa;
+            background-color: #fff;
+            color: #000;
             margin: 0;
             padding: 0;
             display: flex;
@@ -63,7 +63,7 @@
         .submit-btn {
             width: 100%;
             padding: 15px;
-            background-color: #e63946;
+            background-color: #ad2d2d;
             border: none;
             border-radius: 5px;
             color: white;
@@ -86,29 +86,29 @@
         }
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
 <div class="container">
-    <h2>Restaurant Registration Form</h2>
+    <h2>فرم ثبت رستوران</h2>
     <form method="POST" action="{{ route('insertRestaurant') }}">
         @csrf
         <!-- Restaurant Name -->
         <div class="form-group">
-            <label for="name">Restaurant Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your restaurant's name" required>
+            <label for="name">نام رستوران</label>
+            <input type="text" id="name" name="name"  required>
         </div>
 
         <!-- Restaurant Address -->
         <div class="form-group">
-            <label for="restaurant_address">Restaurant Address</label>
-            <textarea id="restaurant_address" name="restaurant_address" placeholder="Enter the restaurant's address" required></textarea>
+            <label for="restaurant_address">آدرس رستوران</label>
+            <textarea id="restaurant_address" name="restaurant_address"  required></textarea>
         </div>
 
         <!-- master_id as hidden -->
         <input type="hidden" name="master_id" value="{{ Auth::user()->id }}">
 
         <!-- Submit Button -->
-        <button type="submit" class="submit-btn">Register Restaurant</button>
+        <button type="submit" class="submit-btn">ثبت</button>
     </form>
 </div>
 

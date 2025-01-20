@@ -9,12 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.3/moment-jalaali.min.js"></script> <!-- Added Jalali library -->
     <style>
       body {
-          background-color: #2b2b2b;
-          color: white;
+          background-color: #fff;
+          color: #000;
           font-family: Arial, sans-serif;
       }
       .sidebar {
-          background-color: #333;
+          background-color: #ad2d2d;
+          
           height: 100vh;
           padding-top: 30px;
           position: fixed;
@@ -34,17 +35,17 @@
       }
       .sidebar .nav-item .nav-link:hover {
           background-color: #ff4d4d;
-          color: white;
+          color: 000;
       }
       .navbar {
           background-color: #444;
-          color: white;
+          color: 000;
           border-radius: 0 10px 10px 0;
           margin-left: 250px;
       }
       .card {
-          background-color: #444;
-          color: white;
+          background-color: #ad2d2d;
+          color: #fff;
           border: 1px solid #ff4d4d;
           margin-bottom: 20px;
           border-radius: 15px;
@@ -68,7 +69,7 @@
           font-weight: bold;
       }
       .live-time {
-          color: #ff4d4d;
+          color: #fff;
           font-size: 1.2rem;
       }
       .sidebar-header {
@@ -78,7 +79,7 @@
       .sidebar-header p {
           margin: 0;
           font-weight: bold;
-          color: #ff4d4d;
+          color: #fff;
       }
       .sidebar-header .live-time {
           font-size: 1rem;
@@ -100,50 +101,50 @@
       }
   </style>
 </head>
-<body>
+<body dir="rtl">
 
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-header">
-            <p>Welcome, {{ Auth::user()->name }}!</p>
+            <p>خوش آمدید, {{ Auth::user()->name }}!</p>
             <div id="liveTime" class="live-time"></div>
             <div id="jalaliDate" class="live-time"></div> <!-- Added Jalali date element -->
         </div>
 
         <div class="nav-item">
-            <a href="{{ route('restaurantManage') }}" class="nav-link">Restaurant Management</a>
+            <a href="{{ route('restaurantManage') }}" class="nav-link"> مدیریت رستوران</a>
         </div>
         <div class="nav-item">
-            <a href="{{ route('userManage') }}" class="nav-link">User Management</a>
+            <a href="{{ route('userManage') }}" class="nav-link">مدیریت کاربر </a>
         </div>
         <div class="nav-item">
-            <a href="{{ route('foodManage') }}" class="nav-link">Food Management</a>
+            <a href="{{ route('foodManage') }}" class="nav-link">مدیریت غذا </a>
         </div>
         <div class="nav-item">
-            <a href="{{ route('categoryManage') }}" class="nav-link">Category Management</a>
+            <a href="{{ route('categoryManage') }}" class="nav-link">مدیریت دسته بندی </a>
         </div>
         <div class="nav-item">
-            <a href="{{ route('factorManage') }}" class="nav-link">Order Management</a>
+            <a href="{{ route('factorManage') }}" class="nav-link">مدیریت سفارشات </a>
         </div>
         <div class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link">Logout</a>
+            <a href="{{ route('logout') }}" class="nav-link">خروج</a>
         </div>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-        <h3 class="navbar-brand" href="#">Admin Panel</h3>
+        <h3 class="navbar-brand" href="#"> پنل ادمین</h3>
         <div class="container-fluid">
             <div class="row">
                 <!-- User Count Card -->
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Users Count
+                            تعداد کاربر
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ $userCount }}</h5>
-                            <p class="hint-text">This represents the total number of registered users in the system.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -152,11 +153,11 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Orders Count
+                            تعداد سفارشات
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ $factorCount }}</h5>
-                            <p class="hint-text">This shows the number of orders processed by the system.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -167,11 +168,11 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Restaurants Count
+                            تعداد رستوران ها
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ $restaurantCount }}</h5>
-                            <p class="hint-text">This indicates how many restaurants are listed in the system.</p>
+                           
                         </div>
                     </div>
                 </div>
@@ -180,11 +181,11 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            Food Items Count
+                            تعداد آیتم غذا ها
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ $foodCount }}</h5>
-                            <p class="hint-text">The total number of food items available in the system.</p>
+                           
                         </div>
                     </div>
                 </div>

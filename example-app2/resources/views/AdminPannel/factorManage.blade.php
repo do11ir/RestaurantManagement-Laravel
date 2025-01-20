@@ -9,33 +9,33 @@
 <style>
     /* Custom Styles */
     body {
-        background-color: #2b2b2b;
-        color: white;
-        font-family: 'Arial', sans-serif;
-    }
+            background-color: #fff;
+            color: black;
+            font-family: 'Arial', sans-serif;
+        }
 
-    h2 {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    .container {
-        max-width: 900px;
-        margin-top: 30px;
-        padding: 20px;
-        background-color: #444;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
+        .container {
+            max-width: 900px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #c1c1c1;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
 
-    /* Buttons */
-    .btn-primary {
-        background-color: #ff4d4d;
-        border: none;
-        color: white;
-    }
+        /* Buttons */
+        .btn-primary {
+            background-color: #ad2d2d;
+            border: none;
+            color: white;
+        }
 
     .btn-primary:hover {
         background-color: #ff3333;
@@ -63,12 +63,12 @@
 
     /* Input and Form Styles */
     .form-control {
-        background-color: #333;
-        color: white;
-        border: 1px solid #444;
-        border-radius: 8px;
-        font-size: 16px;
-    }
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
     .form-control:focus {
         background-color: #444;
@@ -88,11 +88,11 @@
     }
 
 </style>
-<body dir="ltr">
+<body dir="rtl">
 
     <div class="container mt-5">
         
-        <a class="btn btn-primary" href="{{ route('admin') }}">Back to Admin Panel</a>
+        <a class="btn btn-primary" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
                     @if(session('success'))
                       <div class="alert alert-success">
                             {{ session('success') }}
@@ -117,13 +117,13 @@
             <table class="table table-dark table-striped">
                 <thead>
                     <tr class="title-row">
-                        <th>Customer Name</th>
-                        <th>Description</th>
-                        <th>Phone Number</th>
-                        <th>Restaurant ID</th>
-                        <th>Delivery Address</th>
-                        <th>Order Date</th>
-                        <th>Delete</th>
+                        <th>نام مشتری</th>
+                        <th>جزییات</th>
+                        <th> تلفت تماس</th>
+                        <th> ایدی رستوران</th>
+                        <th> آدرس تحویل</th>
+                        <th> تاریخ سفارش</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 @foreach ($factor as $item)

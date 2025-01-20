@@ -9,45 +9,45 @@
 <style>
     /* Custom Styles */
     body {
-        background-color: #2b2b2b; /* Dark Gray background */
-        color: white; /* White text color */
-        font-family: 'Arial', sans-serif;
-    }
+            background-color: #fff;
+            color: black;
+            font-family: 'Arial', sans-serif;
+        }
 
-    h2 {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-        color: white;
-    }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    .container {
-        max-width: 900px;
-        margin-top: 30px;
-        padding: 20px;
-        background-color: #333; /* Dark Gray background for container */
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    }
+        .container {
+            max-width: 900px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #c1c1c1;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
 
-    .btn-primary {
-        background-color: #ff4d4d; /* Cherry Red button */
-        border: none;
-        color: white;
-    }
+        /* Buttons */
+        .btn-primary {
+            background-color: #ad2d2d;
+            border: none;
+            color: white;
+        }
 
     .btn-primary:hover {
         background-color: #ff3333;
     }
 
     .form-control {
-        background-color: #444; /* Dark Gray input */
-        color: white;
-        border: 1px solid #555;
-        border-radius: 8px;
-        font-size: 16px;
-    }
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-size: 16px;
+        }
 
     .form-control:focus {
         background-color: #555;
@@ -77,11 +77,11 @@
         color: white;
     }
 </style>
-<body dir="ltr">
+<body dir="rtl">
 
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Edit User</h2>
-        <a class="btn btn-primary" href="{{ route('admin') }}">Back to Admin Panel</a>
+        <h2 class="text-center mb-4">تغییر کاربر</h2>
+        <a class="btn btn-primary" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
 
         @if(session('success'))
             <div class="alert alert-success">
@@ -105,35 +105,35 @@
             @csrf 
             
             <div class="mb-3">
-                <label for="name" class="form-label">User Name</label>
+                <label for="name" class="form-label">نام کاربر</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $user->name }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="phone" class="form-label">User Phone</label>
+                <label for="phone" class="form-label">تلفن تماس</label>
                 <input type="text" name="phone" id="phone" class="form-control" value="{{ $user->phone }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">User Email</label>
+                <label for="email" class="form-label">ایمیل</label>
                 <input type="email" name="email" id="email" class="form-control" value="{{ $user->email }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">User Address</label>
+                <label for="address" class="form-label">آدرس</label>
                 <textarea id="address" name="address" class="form-control" rows="3">{{ $user->address }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="RoleAdmin" class="form-label">User Role</label>
+                <label for="RoleAdmin" class="form-label">نقش</label>
                 <select name="RoleAdmin" id="RoleAdmin" class="form-select">
                     <option value="{{ $user->RoleAdmin }}" selected>{{ $user->RoleAdmin }}</option>
-                    <option value="">User</option>
-                    <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>Admin</option>
+                    <option value="">کاربر</option>
+                    <option value="master" {{ old('RoleAdmin') == 'master' ? 'selected' : '' }}>مدیر</option>
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Update User</button>
+            <button type="submit" class="btn btn-primary w-100">ذخیره</button>
         </form>
     </div>
 

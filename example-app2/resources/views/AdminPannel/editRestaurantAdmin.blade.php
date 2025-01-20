@@ -9,8 +9,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b; /* Dark Gray background */
-            color: white; /* White text color */
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -19,20 +19,20 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
-            color: white;
         }
 
         .container {
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #333; /* Dark Gray background for container */
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
+        /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d; /* Cherry Red button */
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -42,9 +42,9 @@
         }
 
         .form-control {
-            background-color: #444; /* Dark Gray input */
-            color: white;
-            border: 1px solid #555;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
         }
@@ -78,28 +78,28 @@
         }
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
 <div class="container">
-    <h2>Edit Restaurant</h2>
+    <h2>تغییر رستوران</h2>
     <form method="POST" action="{{ route('updateRestaurants') }}">
         @csrf
         <input type="hidden" name="id" value="{{ $restaurant->id }}">
 
         <!-- Restaurant Name -->
         <div class="form-group mb-3">
-            <label for="name" class="form-label">Restaurant Name</label>
+            <label for="name" class="form-label">نام رستوران</label>
             <input type="text" id="name" name="name" value="{{ $restaurant->name }}" class="form-control" required>
         </div>
 
         <!-- Restaurant Address -->
         <div class="form-group mb-3">
-            <label for="restaurant_address" class="form-label">Restaurant Address</label>
+            <label for="restaurant_address" class="form-label">آدرس رستوران</label>
             <textarea id="restaurant_address" name="restaurant_address" class="form-control" required>{{ $restaurant->restaurant_address }}</textarea>
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary w-100">Update Restaurant</button>
+        <button type="submit" class="btn btn-primary w-100">ذخیره</button>
     </form>
 </div>
 

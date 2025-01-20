@@ -8,8 +8,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b; /* Dark Gray background */
-            color: white; /* White text color */
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -18,20 +18,20 @@
             font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
-            color: white;
         }
 
         .container {
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #333; /* Dark Gray background for container */
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
+        /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d; /* Cherry Red button */
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -41,9 +41,9 @@
         }
 
         .form-control {
-            background-color: #444; /* Dark Gray input */
-            color: white;
-            border: 1px solid #555;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
         }
@@ -77,11 +77,11 @@
         }
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Edit Food</h2>
-        <a class="btn btn-primary" href="{{ route('admin') }}"> Back to Admin Panel </a>
+        <h2 class="text-center mb-4"> تغییر غذا</h2>
+        <a class="btn btn-primary" href="{{ route('admin') }}">بازگشت به پنل ادمین </a>
                     @if(session('success'))
                       <div class="alert alert-success">
                             {{ session('success') }}
@@ -104,17 +104,17 @@
             <input type="hidden" name="id" value="{{ $food->id }}">
             
             <div class="mb-3">
-                <label for="name" class="form-label">Food Name</label>
+                <label for="name" class="form-label">نام</label>
                 <input type="text" name="name" id="name" class="form-control" value="{{ $food->name }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Food Image</label>
+                <label for="image" class="form-label">تصویر</label>
                 <input type="file" name="image" id="image" value="{{ $food->image }}" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label for="status" class="form-label">Status</label>
+                <label for="status" class="form-label">وضعیت</label>
                 <select name="status" id="status" class="form-select" required>
                     <option value="1">Available</option>
                     <option value="0">Not Available</option>
@@ -122,22 +122,22 @@
             </div>
 
             <div class="mb-3">
-                <label for="entity" class="form-label">Quantity</label>
+                <label for="entity" class="form-label">تعداد</label>
                 <input type="number" name="entity" id="entity" class="form-control" value="{{ $food->entity }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
+                <label for="description" class="form-label">جزییات</label>
                 <textarea name="description" id="description" class="form-control" rows="4" required>{{ $food->description }}</textarea>
             </div>
 
             <div class="mb-3">
-                <label for="price" class="form-label">Price</label>
+                <label for="price" class="form-label">قیمت</label>
                 <input type="number" name="price" id="price" class="form-control" value="{{ $food->price }}" required>
             </div>
               
             <div class="mb-3">
-                <label for="category_id" class="form-label">Category</label>
+                <label for="category_id" class="form-label">دسته بندی</label>
                 <select name="category_id" id="category_id" class="form-select" required>
                     @foreach($category as $categories)
                     <option value="{{ $categories->name }}">{{ $categories->name }}</option>
@@ -145,7 +145,7 @@
                 </select>
             </div>
             
-            <button type="submit" class="btn btn-primary w-100">Update Food</button>
+            <button type="submit" class="btn btn-primary w-100">ذخیره</button>
         </form>
     </div>
              

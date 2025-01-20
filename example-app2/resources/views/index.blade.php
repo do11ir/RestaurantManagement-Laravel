@@ -106,10 +106,10 @@
          @if($Basket)
             {{-- <h3 style="background-color: aliceblue"><a href="foodBasket">مشاهده سبد خرید</a></h3> --}}
             <a href="{{ route('foodBasket') }}" class="buy-basket">
-               <i class="fas fa-shopping-cart"></i>View cart
+               <i class="fas fa-shopping-cart"></i>مشاهده سبد خرید
             </a>
          @else
-            <h3 class="buy-basket">cart is empty</h3>
+            <h3 class="buy-basket">سبد خرید خالی است</h3>
          @endif
       @endif
    </div>
@@ -117,7 +117,7 @@
     <!-- Hero Section -->
    <div class="hero">
       <h2></h2>
-      <p>Delicious food, amazing restaurants, and much more!</p>
+      <p>خوش آمدید!</p>
 
       <!-- Categories Section -->
    <div class="container my-5" >

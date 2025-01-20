@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #121212;
+            background-color: #fff;
             color: #f8f9fa;
         }
 
         .sidebar {
-            background-color: #1c1c1c;
+            background-color: #f0f0f0;
             min-height: 100vh;
             padding: 15px;
         }
@@ -31,7 +31,7 @@
         }
 
         .card {
-            background-color: #1c1c1c;
+            background-color: #ad2d2d;
             border: 1px solid #343a40;
         }
 
@@ -56,12 +56,12 @@
         }
 
         .table {
-            background-color: #1c1c1c;
+            background-color: #ad2d2d;
             color: #f8f9fa;
         }
 
         .table th, .table td {
-            border-color: #343a40;
+            border-color: #ad2d2d;
         }
 
         .alert {

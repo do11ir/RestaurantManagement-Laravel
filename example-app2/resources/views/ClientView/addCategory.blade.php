@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #121212;
-            color: #f8f9fa;
+            background-color: #fff;
+            color: #000;
         }
 
         .sidebar {
@@ -46,7 +46,7 @@
         }
 
         .btn-primary {
-            background-color: #e63946;
+            background-color: #ad2d2d;
             border-color: #e63946;
         }
 
@@ -56,8 +56,8 @@
         }
 
         .table {
-            background-color: #1c1c1c;
-            color: #f8f9fa;
+            background-color: #f0f0f0;
+            color: #000;
         }
 
         .table th, .table td {
@@ -70,11 +70,11 @@
         }
     </style>
 </head>
-<body dir="ltr">
+<body dir="rtl">
 
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Add New Category</h2>
-        <a class="btn btn-primary" href="{{ route('profile') }}"> Back to Profile </a>
+        <h2 class="text-center mb-4">افزودن دسته بندی</h2>
+        <a class="btn btn-primary" href="{{ route('profile') }}">بازگشت به پروفایل </a>
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -95,13 +95,13 @@
             @csrf 
             
             <div class="mb-3">
-                <label for="name" class="form-label">Category Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name" required>
+                <label for="name" class="form-label"> نام دسته بندی</label>
+                <input type="text" name="name" id="name" class="form-control"  required>
             </div>
 
             <input type="hidden" name="restaurant_id" value="{{ Auth::user()->id }}">
            
-            <button type="submit" class="btn btn-primary w-100">Add Category</button>
+            <button type="submit" class="btn btn-primary w-100"> افزودن</button>
         </form>
     </div>
 

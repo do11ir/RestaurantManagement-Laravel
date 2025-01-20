@@ -12,8 +12,8 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #2e2e2e;
-            color: #fff;
+            background-color: #fff;
+            color: #000;
             line-height: 1.6;
         }
 
@@ -24,7 +24,7 @@
 
         /* Header */
         .header {
-            background-color: #D32F2F;
+            background-color: #ad2d2d;
             padding: 20px;
             text-align: center;
         }
@@ -44,7 +44,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #424242;
+            
+            background-color: #f0f0f0;
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 8px;
@@ -52,7 +53,7 @@
         }
 
         .cart-item:hover {
-            background-color: #2b2b2b;
+            background-color: #c0c0c0;
         }
 
         .cart-item img {
@@ -69,23 +70,23 @@
         }
 
         .cart-item-info h2 {
-            color: #fff;
+            color: #000;
             font-size: 1.4rem;
         }
 
         .cart-item-info p {
             font-size: 1rem;
-            color: #ffffff;
+            color: #000;
         }
 
         .cart-item-price {
             font-size: 1.2rem;
-            color: #ffffff;
+            color: #000;
             margin-left: 15px;
         }
 
         .cart-item button {
-            background-color: #ff4d4d;
+            background-color: #ad2d2d;
             color: #ffffff;
             border: none;
             padding: 8px 12px;
@@ -96,7 +97,7 @@
         }
 
         .cart-item button:hover {
-            background-color: #ff1a1a;
+            background-color: #000;
         }
 
         /* Checkout Button */
@@ -104,7 +105,7 @@
             display: block;
             width: 100%;
             text-align: center;
-            background-color: #D32F2F;
+            background-color: #ad2d2d;
             color: #fff;
             padding: 15px 0;
             font-size: 1.2rem;
@@ -122,7 +123,7 @@
 
         /* Modal */
         .modal-content {
-            background-color: #424242;
+            background-color: #c0c0c0;
             padding: 20px;
             border-radius: 8px;
         }
@@ -132,8 +133,8 @@
             padding: 10px;
             border: 1px solid #D32F2F;
             border-radius: 5px;
-            background-color: #2b2b2b;
-            color: #fff;
+            background-color: #fff;
+            color: #000;
             font-size: 1rem;
             margin-bottom: 15px;
         }
@@ -141,7 +142,7 @@
         .modal-content button {
             width: 100%;
             padding: 15px;
-            background-color: #D32F2F;
+            background-color: #ad2d2d;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -187,9 +188,9 @@
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
     <header class="header">
-        <h1>Shopping Cart</h1>
+        <h1>سبد خرید</h1>
     </header>
 
     <!-- Success Message -->
@@ -206,7 +207,7 @@
     $restaurant_name = 'none';
     @endphp
     <div class="container cart-container">
-        <h2>Items in Your Cart</h2>
+        <h2>آیتم ها</h2>
 
         @foreach($food as $foodss)
             @foreach($products_baskets as $item)
@@ -219,20 +220,20 @@
                             @php
                                 $restaurant_name =  $foodss->restaurant_id;
                             @endphp
-                            <p>Quantity: {{ $item->count }}</p>
+                            <p>امتیاز: {{ $item->count }}</p>
                         </div>
                         <div class="cart-item-price">{{ $foodss->price }}</div>
                         @php 
                             $total += $foodss->price * $item->count;
                         @endphp
-                        <a href="{{ route('deleteOrder', ['id' => $item->id]) }}" class="btn btn-cherry">Remove</a>
+                        <a href="{{ route('deleteOrder', ['id' => $item->id]) }}" class="btn btn-cherry">حذف</a>
                     </div>
                 @endif
             @endforeach
         @endforeach
 
-        <h2>Total Price: {{ number_format($total) }}</h2>
-        <button class="checkout-btn" id="openModalBtn">Proceed to Checkout</button>
+        <h2>مبلغ کل: {{ number_format($total) }}</h2>
+        <button class="checkout-btn" id="openModalBtn">ادامه فرایند خرید</button>
     </div>
 
     <!-- Modal for Checkout Form -->
@@ -245,13 +246,13 @@
     
                     <!-- Name -->
                     <div style="margin-bottom: 20px;">
-                        <label for="name">Name</label>
+                        <label for="name">نام</label>
                         <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" required>
                     </div>
     
                     <!-- Phone Number -->
                     <div style="margin-bottom: 20px;">
-                        <label for="phone" >Phone Number</label>
+                        <label for="phone" > شماره تماس</label>
                         <input type="text" id="phone" name="phoneNumber" value="{{ Auth::user()->phone }}" required >
                     </div>
                     
@@ -261,9 +262,9 @@
                    
                     <!-- Address -->
                     <div style="margin-bottom: 20px;">
-                        <label for="address" >Address</label>
+                        <label for="address" >آدرس</label>
                         <select id="address" name="address" required >
-                            <option value="" disabled selected>Select Address</option>
+                            <option value="" disabled selected> انتخاب کنید</option>
                             @foreach($NewAddress as $item)
                                 @if($item->user_id == Auth::user()->id)
                                     <option value="{{ $item->address }}">{{ $item->address }}</option>
@@ -277,13 +278,13 @@
     
                     <!-- Order Description -->
                     <div style="margin-bottom: 20px;">
-                        <label for="orderDescribtion">Order Description (Optional)</label>
+                        <label for="orderDescribtion"> توضیحات (اختیاری) </label>
                         <textarea id="orderDescribtion" name="orderDescribtion" ></textarea>
                     </div>
 
                     <!-- فیلد نام رستوران -->
                     <div style="margin-bottom: 20px;">
-                        <label for="restaurant_name">restaurant</label>
+                        <label for="restaurant_name">رستوران</label>
                         @foreach($restaurant as $restaurants)
                                 @if($restaurants->id == $restaurant_name)
                                     <p id="restaurant_name">{{ $restaurants->name }}</p>
@@ -295,10 +296,10 @@
                     <input type="hidden" name="basket_id" value="{{ $Basket->id }}">
     
                     <!-- Submit Order Button -->
-                    <button type="submit" class="checkout-btn">Submit Order</button>
+                    <button type="submit" class="checkout-btn"> ثبت سفارش</button>
                 </form>
     
-                <button type="button" class="btn btn-danger mt-3 w-100" id="closeModalBtn">Close</button>
+                <button type="button" class="btn btn-danger mt-3 w-100" id="closeModalBtn">بستن</button>
             </div>
         </div>
     </div>

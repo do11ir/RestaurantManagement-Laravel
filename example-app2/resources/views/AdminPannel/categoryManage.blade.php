@@ -9,8 +9,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b;
-            color: white;
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -25,14 +25,14 @@
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #444;
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d;
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -63,8 +63,8 @@
 
         /* Input and Form Styles */
         .form-control {
-            background-color: #333;
-            color: white;
+            background-color: #fff;
+            color: #000;
             border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
@@ -89,12 +89,12 @@
 
     </style>
 </head>
-<body>
+<body dir="rtl">
 
     <!-- Main Container -->
     <div class="container">
-        <h2>Add New Category</h2>
-        <a class="btn btn-primary mb-3" href="{{ route('admin') }}">Back to Admin Panel</a>
+        <h2>افرودن دسته بندی</h2>
+        <a class="btn btn-primary mb-3" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
 
         <!-- Success Message -->
         @if(session('success'))
@@ -118,13 +118,13 @@
         <form action="{{ route('insertCategoryAdmin') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="name" class="form-label">Category Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name" required>
+                <label for="name" class="form-label">نام دسته بندی</label>
+                <input type="text" name="name" id="name" class="form-control"  required>
             </div>
 
             <input type="hidden" name="restaurant_id" value="{{ Auth::user()->id }}">
 
-            <button type="submit" class="btn btn-primary w-100">Add New Category</button>
+            <button type="submit" class="btn btn-primary w-100">افزودن</button>
         </form>
     </div>
 
@@ -134,9 +134,9 @@
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Category Name</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>نام دسته بندی</th>
+                        <th>تغییر</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>

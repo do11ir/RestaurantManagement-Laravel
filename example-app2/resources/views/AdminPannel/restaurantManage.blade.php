@@ -8,8 +8,8 @@
     <style>
         /* Custom Styles */
         body {
-            background-color: #2b2b2b;
-            color: white;
+            background-color: #fff;
+            color: black;
             font-family: 'Arial', sans-serif;
         }
 
@@ -24,14 +24,14 @@
             max-width: 900px;
             margin-top: 30px;
             padding: 20px;
-            background-color: #444;
+            background-color: #c1c1c1;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         /* Buttons */
         .btn-primary {
-            background-color: #ff4d4d;
+            background-color: #ad2d2d;
             border: none;
             color: white;
         }
@@ -62,8 +62,8 @@
 
         /* Input and Form Styles */
         .form-control {
-            background-color: #333;
-            color: white;
+            background-color: #fff;
+            color: #000;
             border: 1px solid #444;
             border-radius: 8px;
             font-size: 16px;
@@ -88,11 +88,11 @@
 
     </style>
 </head>
-<body>
+<body dir="rtl">
 
     <div class="container">
-        <h2 class="text-center mb-4">Add New Restaurant</h2>
-        <a class="btn btn-primary mb-3" href="{{ route('admin') }}">Back to Admin Panel</a>
+        <h2 class="text-center mb-4">افزودن رستوران</h2>
+        <a class="btn btn-primary mb-3" href="{{ route('admin') }}">بازگشت به پنل ادمین</a>
 
         <!-- Success Message -->
         @if(session('success'))
@@ -117,17 +117,17 @@
             @csrf
 
             <div class="mb-3">
-                <label for="name" class="form-label">Restaurant Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter restaurant name" required>
+                <label for="name" class="form-label">نام رستوران</label>
+                <input type="text" name="name" id="name" class="form-control"  required>
             </div>
 
             <div class="mb-3">
-                <label for="restaurant_address" class="form-label">Restaurant Address</label>
-                <textarea id="restaurant_address" class="form-control" name="restaurant_address" placeholder="Enter restaurant address" required></textarea>
+                <label for="restaurant_address" class="form-label">آدرس رستوران</label>
+                <textarea id="restaurant_address" class="form-control" name="restaurant_address"  required></textarea>
             </div>
 
             <input type="hidden" name="master_id" value="{{ Auth::user()->id }}">
-            <button type="submit" class="btn btn-primary w-100">Add Restaurant</button>
+            <button type="submit" class="btn btn-primary w-100">افزودن</button>
         </form>
     </div>
 
